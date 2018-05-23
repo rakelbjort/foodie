@@ -8,10 +8,14 @@ const Article = props => {
   const { data } = props;
   //   console.log(props);
   return (
-    <div>
-      <h1>{data.title}</h1>
-      <p>{data.abstract}</p>
-      <div dangerouslySetInnerHTML={{ __html: Marked(data.content) }} />
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-lg-4">
+          <h1>{data.title}</h1>
+          <p>{data.abstract}</p>
+          <div dangerouslySetInnerHTML={{ __html: Marked(data.content) }} />
+        </div>
+      </div>
     </div>
   );
 };
