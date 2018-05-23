@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Marked from 'marked';
+
 import './index.scss';
 
 const Article = props => {
@@ -9,7 +11,7 @@ const Article = props => {
     <div>
       <h1>{data.title}</h1>
       <p>{data.abstract}</p>
-      <p>{data.content}</p>
+      <div dangerouslySetInnerHTML={{ __html: Marked(data.content) }} />
     </div>
   );
 };
