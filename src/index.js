@@ -20,7 +20,6 @@ client
     entries.items.forEach(entry => {
       if (entry.fields) {
         data = entry.fields;
-        console.log(JSON.stringify(data));
         ReactDOM.render(<App {...data} />, document.getElementById('root'));
         registerServiceWorker();
       }

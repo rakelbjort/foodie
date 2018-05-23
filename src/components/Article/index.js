@@ -8,9 +8,9 @@ const Article = props => {
   const { data } = props;
   //   console.log(props);
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="row">
-        <div className="col-lg-4">
+        <div className="col-sm-8">
           <h1>{data.title}</h1>
           <p>{data.abstract}</p>
           <div dangerouslySetInnerHTML={{ __html: Marked(data.content) }} />
