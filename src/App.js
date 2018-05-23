@@ -5,10 +5,14 @@ import Article from './components/Article';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    // console.log('app data', this.props);
     return (
       <div className="App">
-        <Article />
+        <Article data={this.props} />
       </div>
     );
   }

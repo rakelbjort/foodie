@@ -4,21 +4,28 @@ import './index.scss';
 
 const Article = props => {
   const { data } = props;
+  //   console.log(props);
   return (
     <div>
       <h1>{data.title}</h1>
+      <p>{data.abstract}</p>
+      <p>{data.content}</p>
     </div>
   );
 };
 
 Article.propTypes = {
   data: PropTypes.shape({
-    title: PropTypes.string
+    title: PropTypes.string,
+    abstract: PropTypes.string,
+    content: PropTypes.string
   })
 };
 Article.defaultProps = {
   data: {
-    title: 'TEST'
+    title: 'TEST',
+    abstract: 'TEST',
+    content: 'TEST'
   }
 };
 

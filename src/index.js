@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import * as contentful from 'contentful';
+
+import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+let data = '';
 var client = contentful.createClient({
   space: 'ifxfj736xke9',
   accessToken:
@@ -18,10 +20,9 @@ client
     console.log('her');
     entries.items.forEach(entry => {
       if (entry.fields) {
-        console.log(JSON.stringify(entry.fields));
+        data = entry.fields;
+        ReactDOM.render(<App {...data} />, document.getElementById('root'));
+        registerServiceWorker();
       }
     });
   });
-
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
