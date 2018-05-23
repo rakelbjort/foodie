@@ -18,7 +18,7 @@ client
     console.log('her');
     entries.items.forEach(entry => {
       if (entry.fields) {
-        console.log(entry.fields);
+        console.log(JSON.stringify(entry.fields));
       }
     });
   });
