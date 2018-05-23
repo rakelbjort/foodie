@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as contentful from 'contentful';
 
-import './index.css';
+import '../src/styles/styles.scss';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
