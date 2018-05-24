@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import Article from './components/Article';
+import SingleBlogItem from './views/SingleBlogItem';
+import Home from './views/Home';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Article data={this.props} />
-      </div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route
+          exact
+          path="/blog"
+          render={props => <SingleBlogItem {...this.props} />}
+        />
+      </Switch>
     );
   }
 }
-
-export default App;

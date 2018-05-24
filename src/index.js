@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import * as contentful from 'contentful';
 
 import '../src/styles/styles.scss';
@@ -20,7 +22,12 @@ client
     entries.items.forEach(entry => {
       if (entry.fields) {
         data = entry.fields;
-        ReactDOM.render(<App {...data} />, document.getElementById('root'));
+        ReactDOM.render(
+          <Router>
+            <App {...data} />
+          </Router>,
+          document.getElementById('root')
+        );
         registerServiceWorker();
       }
     });
