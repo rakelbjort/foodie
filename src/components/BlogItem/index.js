@@ -21,17 +21,10 @@ const BlogItem = props => {
 
 BlogItem.propTypes = {
   data: PropTypes.shape({
-    title: PropTypes.string,
-    abstract: PropTypes.string,
-    content: PropTypes.string
+    title: PropTypes.string.isRequired,
+    abstract: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired
   })
-};
-BlogItem.defaultProps = {
-  data: {
-    title: 'TEST',
-    abstract: 'TEST',
-    content: 'TEST'
-  }
 };
 
 export default BlogItem;
