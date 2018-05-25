@@ -1,0 +1,20 @@
+@import '../../styles/styles.scss';
+
+.link-container {
+  margin: 30px;
+}
+.text-link {
+  text-decoration: none;
+  color: $gray;
+  padding: 10px;
+  margin-top: 50px;
+  transition: all 320ms ease;
+
+  border: 1px solid $gray;
+  &:hover {
+    text-decoration: none;
+    background-color: $gray;
+    color: white;
+    transition: all 320ms ease;
+  }
+}
